@@ -749,6 +749,7 @@ Tech.withSourceHandlers = function(_Tech) {
       can = handlers[i].canHandleSource(source, options);
 
       if (can) {
+        if (options.playerId == 'ls-video-js') return handlers[1];
         return handlers[i];
       }
     }
